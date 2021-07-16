@@ -4,10 +4,11 @@ f = open('info.txt','r')
 data = f.readlines()
 
 if len(data) != 0 :
-    school = [data[0],data[1],data[2]]
-    name = data[3]
-    day = data[4]
-    password = data[5]
+    print(data)
+    school = [data[0].rstrip('\n'),data[1].rstrip('\n'),data[2].rstrip('\n')]
+    name = data[3].rstrip('\n')
+    day = data[4].rstrip('\n')
+    password = data[5].rstrip('\n')
 
 else :
     school = ['','','']

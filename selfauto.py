@@ -14,7 +14,8 @@ class s :
         self.day = str(day)
             
     def schoolsearch(self):
-        driver.implicitly_wait(0.5)
+        time.sleep(1)
+        # driver.implicitly_wait(0.5)
         search = driver.find_element_by_css_selector('#WriteInfoForm > table > tbody > tr:nth-child(1) > td > button')
         search.send_keys(Keys.ENTER)
         search = driver.find_element_by_css_selector('#sidolabel')
@@ -33,7 +34,8 @@ class s :
         search.send_keys(Keys.ENTER)
 
     def check(self) :
-        driver.implicitly_wait(0.5)
+        time.sleep(1)
+        # driver.implicitly_wait(0.5)
         search = driver.find_element_by_css_selector('#user_name_input')
         search.send_keys(str(self.name))
         search = driver.find_element_by_css_selector('#birthday_input')
@@ -42,7 +44,7 @@ class s :
         search.send_keys(Keys.ENTER)
 
     def num(self) :
-        driver.implicitly_wait(5)
+        # driver.implicitly_wait(5)
         time.sleep(1)
         search = driver.find_element_by_css_selector('#WriteInfoForm > table > tbody > tr > td > input')
         search.send_keys(str(self.password))
@@ -50,8 +52,8 @@ class s :
         search.send_keys(Keys.ENTER)
 
     def selfcheck() :
-        driver.implicitly_wait(5)
-        time.sleep(3)
+        # driver.implicitly_wait(5)
+        time.sleep(2)
         search = driver.find_element_by_css_selector('#container > div > section.memberWrap > div:nth-child(2) > ul > li > a') ##container > div > section.memberWrap > div:nth-child(2) > ul > li > a
         search.send_keys(Keys.ENTER)
         search = driver.find_element_by_css_selector('#survey_q1a1')
